@@ -13,35 +13,35 @@ pipeline {
         stage('Build image') {
             steps {
                 sh '''
-                docker build -t chikibevchik/Ansible:latest .
+                docker build -t chikibevchik/ansible:latest .
                 '''
             }
         }
         stage('push image') {
             steps {
                 sh '''
-                docker push chikibevchik/Ansible:latest
+                docker push chikibevchik/ansible:latest
                 '''
             }
         }
         stage('delete image') {
             steps {
                 sh '''
-                docker rmi --force chikibevchik/Ansible:latest
+                docker rmi --force chikibevchik/ansible:latest
                 '''
             }
         }
         stage('pull image') {
             steps {
                 sh '''
-                docker pull chikibevchik/Ansible:latest
+                docker pull chikibevchik/ansible:latest
                 '''
             }
         }
         stage('run containter') {
             steps {
                 sh '''
-                docker run chikibevchik/Ansible:latest
+                docker run chikibevchik/ansible:latest
                 '''
             }
         }
