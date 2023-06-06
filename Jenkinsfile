@@ -24,8 +24,7 @@ RUN apt-get update && \
   pip3 install --upgrade virtualenv && \
   pip3 install pywinrm[kerberos] && \
   apt install krb5-user -y && \ 
-  pip3 install pywinrm && \
-  pip3 install ansible > /home/kaka/Ansible/Dockerfile
+  pip3 install pywinrm && pip3 install ansible > /home/kaka/Ansible/Dockerfile
                 ''' 
             }
         }
