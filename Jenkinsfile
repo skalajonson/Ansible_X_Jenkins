@@ -2,14 +2,6 @@ pipeline {
     agent any
     
     stages {
-        stage('Creating dir and Dockerfile') {
-            steps {
-                sh '''
-                mkdir /home/kaka/Ansible/
-                touch /home/kaka/Ansible/Dockerfile
-                '''
-            }
-        }
         stage('Build image') {
             steps {
                 sh '''
