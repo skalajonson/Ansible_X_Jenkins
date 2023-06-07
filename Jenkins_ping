@@ -5,7 +5,7 @@ pipeline {
         stage('ping host') {
             steps {
                 sh '''
-                docker run -v /etc/ansible:/etc/ansible -i chikibevchik/ansible:latest
+                docker run -v /etc/ansible:/etc/ansible --user=root -i chikibevchik/ansible:latest
 
 
 echo [linux]
