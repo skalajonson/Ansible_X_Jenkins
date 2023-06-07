@@ -41,7 +41,7 @@ pipeline {
         stage('run containter') {
             steps {
                 sh '''
-                docker run -it chikibevchik/ansible:latest
+                docker run -i chikibevchik/ansible:latest
                 '''
             }
         }
