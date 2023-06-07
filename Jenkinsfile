@@ -45,5 +45,12 @@ pipeline {
                 '''
             }
         }
+        stage('stop container') {
+            steps {
+                sh '''
+                docker rm -f chikibevchik/ansible:latest
+                '''
+            }
+        }
     }
 }
