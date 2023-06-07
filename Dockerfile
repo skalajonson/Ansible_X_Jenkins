@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y python3 python3-pip software-properties
 
 RUN echo "[linux]" >> /etc/ansible/hosts && \
     echo "192.168.1.16" >> /etc/ansible/hosts && \
-    echo "[defaults]" >> /etc/ansible/hosts && \
+    echo "[defaults]" >> /etc/ansible/ansible.cfg && \
     echo "host_key_checking = False" >> /etc/ansible/ansible.cfg && \
     echo "[privilege_escalation]" >> /etc/ansible/ansible.cfg && \
     echo "become_ask_pass = True" >> /etc/ansible/ansible.cfg
